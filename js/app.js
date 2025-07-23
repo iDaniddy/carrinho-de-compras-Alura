@@ -20,7 +20,7 @@ function adicionar() {
         return;
     }
 
-
+    //nome do produto, valor unitário e preco que é a multiblicação de quantidade x valor unitário.
     let nomeProduto = produto.split('-')[0];
     let valorUnitario = parseFloat(produto.split('R$')[1]);
     let preco = quantidade * valorUnitario;
@@ -29,7 +29,7 @@ function adicionar() {
     let carrinho = document.getElementById('lista-produtos');
     carrinho.innerHTML = carrinho.innerHTML + `<section class="carrinho__produtos__produto">
     <span class="texto-azul">${quantidade}x</span> ${nomeProduto} <span class="texto-azul">R${preco}</span>
-  </section>`;
+    </section>`;
 
 
     totalGeral = totalGeral + preco;
